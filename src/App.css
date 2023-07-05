@@ -1,38 +1,206 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: "JetBrains Mono";
   display: flex;
   flex-direction: column;
+  min-width: 100%;
+  overflow: hidden;
+}
+.container {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 133px 10px 0 10px;
+  width: 100%;
+}
+.pass__title {
+  text-align: center;
+  font-size: 24px;
+  color: #817D92;
+}
+/* ================== */
+.pass__field {
+  background-color: #24232C;
+  display: flex;
+  justify-content: space-between;
+  margin: 31px 0 0 0;
+  padding: 19px 32px;
+}
+.pass__input {
+  background-color: transparent;
+  font-size: 32px;
+  color: #E6E5EA;
+  opacity: 0.25;
+}
+.pass__copy-img-container {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin: 0 0 0 4px;
+  cursor: pointer;
+  fill: #A4FFAF;
+  transition: 0.2s;
+}
+.pass__copy-img-container:hover {
+  fill: #FFFFFF;
+}
+.main-block {
+  padding: 24px 32px 32px 32px;
+  margin: 24px 0 0 0;
+  background-color: #24232C;
+}
+/* ========================= */
+.pass-thumb__header {
+  display: flex;
+  justify-content: space-between;
+}
+.pass-thumb__length {
+  color: #E6E5EA;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+.pass-thumb__count {
+  font-size: 32px;
+  color: #A4FFAF;
+}
+.pass-thumb__thumb {
+  margin: 16px 0 0 0;
+  position: relative;
+}
+.pass-thumb__line {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 10%;
+  height: 8px;
+  background-color: #A4FFAF;
+  pointer-events: none;
+}
+.pass-thumb__input {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #18171F;
+  height: 8px;
+  cursor: pointer;
+}
+.pass-thumb__input::-webkit-slider-thumb {
+  appearance: none;
+  height: 28px;
+  width: 28px;
+  background-color: #E6E5EA;
+  border-radius: 28px;
+  position: relative;
+  border: 2px solid transparent;
+  transition: 0.2s;
+  z-index: 2;
+}
+.pass-thumb__input::-webkit-slider-thumb:hover {
+  background: #18171F;
+  border: 2px solid #A4FFAF;
+}
+/* ======================= */
+.checkboxes {
+  margin: 32px 0 0 0;
+}
+.checkboxes__block {
+  font-size: 18px;
+  color: #E6E5EA;
+}
+.checkboxes__block:not(:last-child) {
+  margin: 0 0 19px 0;
+}
+.checkboxes__checkbox {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #E6E5EA;
+  position: relative;
+  transform: translateY(1px);
+  cursor: pointer;
+}
+.checkboxes__checkbox:checked {
+  background-color: #A4FFAF;
+}
+input[type=checkbox]:checked::after {
+  position: absolute;
+  left: 1px;
+  top: 0;
+  content: url(./imges/icon-check.svg);
+}
+.checkboxes__title {
+  margin: 0 0 0 24px;
+  cursor: pointer;
+  -webkit-user-select: none
+}
+/* =============================== */
+.pass-strength {
+  margin: 31px 0 0 0;
+  padding: 20px 32px;
+  background: #18171F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pass-strength__title {
+  color: #817D92;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.pass-strength__indicator-container {
+  display: flex;
+  align-items: center;
+}
+.pass-strength__indicator-title {
+  color: #E6E5EA;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.pass-strength__indicator {
+  display: flex;
+  margin: 0 0 0 15.5px;
+}
+.pass-strength__indicator > *:not(:last-child) {
+  margin: 0 8px 0 0;
+}
+.pass-strength__field {
+  width: 10px;
+  height: 28px;
+  background: #000;
+}
+/* ========================= */
+.pass-generate {
+  margin: 32px 0 0 0;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
 }
-
-.App-link {
-  color: #61dafb;
+.pass-generate__btn {
+  flex: 1 1 auto;
+  padding: 21px 0 20px 0;
+  background-color: #A4FFAF;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #24232C;
+  transition: 0.3s;
+  border: 2px solid transparent;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pass-generate__btn:hover {
+  background-color: transparent;
+  color: #A4FFAF;
+  border: 2px solid #A4FFAF;
+}
+.pass-generate__icon {
+  position: absolute;
+  right: 160px;
+  top: 28px;
+  color: #24232C;
+  transition: 0.3s;
+  cursor: pointer;
+  pointer-events: none;
+}
+.pass-generate__btn:hover +.pass-generate__icon {
+  color: #A4FFAF;
 }
