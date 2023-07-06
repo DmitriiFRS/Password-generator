@@ -29,6 +29,11 @@
   font-size: 32px;
   color: #E6E5EA;
   opacity: 0.25;
+  cursor: auto;
+}
+.pass_copy-container {
+  display: flex;
+  position: relative;
 }
 .pass__copy-img-container {
   display: flex;
@@ -42,6 +47,16 @@
 .pass__copy-img-container:hover {
   fill: #FFFFFF;
 }
+.pass__copied {
+  display: inline-block;
+  color: #A4FFAF;
+  font-size: 18px;
+  text-transform: uppercase;
+  position: absolute;
+  right: 50px;
+  top: 13px;
+}
+/* ======================================== */
 .main-block {
   padding: 24px 32px 32px 32px;
   margin: 24px 0 0 0;
