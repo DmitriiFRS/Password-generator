@@ -182,7 +182,8 @@ input[type=checkbox]:checked::after {
 .pass-strength__field {
   width: 10px;
   height: 28px;
-  background: #000;
+  background: transparent;
+  border: 2px solid #E6E5EA;
 }
 /* ========================= */
 .pass-generate {

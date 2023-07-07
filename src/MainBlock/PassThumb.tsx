@@ -4,7 +4,7 @@ import { changeThumbValue } from "../Redux/Slices/passgenSlice";
 
 function PassThumb() {
    const dispatch = useDispatch();
-   const thumbValue = useSelector((state: RootState) => state.passgen.sliderThumbValue);
+   const thumbValue = useSelector((state: RootState) => state.passgen.sliderValue);
    let percentage = (thumbValue / 20) * 100;
    return (
       <div className="pass-thumb">

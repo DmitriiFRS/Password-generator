@@ -12,7 +12,6 @@ function PassCheckboxes () {
    function changePassConfig(e: ChangeEvent<HTMLInputElement>, index: number) {
       dispatch(changeSettings(index))
    }
-   console.log(settingArrays)
    const checkboxes = [{id: 1, title: 'Include Uppercase Letters'}, {id: 1, title: 'Include Lowercase Letters'},
    {id: 1, title: 'Include Numbers'}, {id: 1, title: 'Include Symbols'},]
    return (
