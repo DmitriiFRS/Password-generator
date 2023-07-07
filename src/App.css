@@ -22,7 +22,7 @@
   display: flex;
   justify-content: space-between;
   margin: 31px 0 0 0;
-  padding: 19px 32px;
+  padding: 19px 22px 19px 32px;
 }
 .pass__input {
   background-color: transparent;
@@ -30,10 +30,12 @@
   color: #E6E5EA;
   opacity: 0.25;
   cursor: auto;
+  width: 100%;
 }
 .pass_copy-container {
   display: flex;
   position: relative;
+  flex: 0 1 auto;
 }
 .pass__copy-img-container {
   display: flex;
@@ -131,7 +133,7 @@
   width: 20px;
   border: 2px solid #E6E5EA;
   position: relative;
-  transform: translateY(1px);
+  transform: translateY(5px);
   cursor: pointer;
 }
 .checkboxes__checkbox:checked {
@@ -210,7 +212,7 @@ input[type=checkbox]:checked::after {
 }
 .pass-generate__icon {
   position: absolute;
-  right: 160px;
+  right: 30%;
   top: 28px;
   color: #24232C;
   transition: 0.3s;
@@ -219,4 +221,84 @@ input[type=checkbox]:checked::after {
 }
 .pass-generate__btn:hover +.pass-generate__icon {
   color: #A4FFAF;
+}
+@media(max-width: 520px) {
+  .pass__input {
+    font-size: 24px;
+  }
+  .pass__copied {
+    font-size: 16px;
+    top: 9px;
+  }
+}
+@media(max-width: 470px) {
+  .pass-strength__title {
+    font-size: 16px;
+  }
+  .pass-strength__indicator-title {
+    font-size: 18px;
+  }
+  .pass-strength {
+    padding: 20px 16px;
+  }
+}
+@media(max-width: 420px) {
+  .pass__input {
+    font-size: 16px;
+  }
+  .pass__copied {
+    font-size: 10px;
+  }
+  .pass-generate__icon {
+    right: 25%;
+  }
+}
+@media(max-width: 400px) {
+  .checkboxes__block {
+    font-size: 16px;
+  }
+}
+@media(max-width: 385px) {
+  .pass-strength__title {
+    font-size: 14px;
+  }
+  .pass-strength__indicator-title {
+    font-size: 14px;
+  }
+  .pass-strength {
+    padding: 20px 10px;
+  }
+}
+@media(max-width: 370px) {
+  .checkboxes__block:not(:last-child) {
+    margin: 0 0 16px 0;
+  }
+  .checkboxes__title {
+    margin: 0 0 0 20px;
+  }
+  .pass__field {
+    padding: 19px 16px 19px 16px;
+  }
+  .main-block {
+    padding: 24px 16px 32px 16px;
+  }
+}
+@media(max-width: 355px) {
+  .pass-strength__title {
+    font-size: 12px;
+  }
+  .pass-strength__indicator-title {
+    font-size: 12px;
+  }
+  .pass-strength {
+    padding: 20px 6px;
+  }
+}
+@media(max-width: 333px) {
+  .checkboxes__title {
+    margin: 0 0 0 10px;
+  }
+  .checkboxes__block {
+    font-size: 15px;
+  }
 }

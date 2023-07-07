@@ -16,7 +16,7 @@ function PassField() {
    }
    return (
       <div className="pass__field">
-         <input value={passwordValue} readOnly placeholder='P4$5W0rD!' type="text" className="pass__input" />
+         <input value={passwordValue} readOnly placeholder='P4$5W0rD!' type="text" className="pass__input" style={{opacity: passwordValue.length > 0 ? 1 : ''}} />
          <div className="pass_copy-container">
             {isCopy && <span className="pass__copied">Copied</span>}
             <CopyToClipboard text={passwordValue}>

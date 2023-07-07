@@ -1,13 +1,13 @@
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
-type config = {
-   letters: Array<string>
+type config<T> = {
+   letters: Array<T>
 }
 type passState = {
    password: string
    isCopy: boolean
    sliderValue: number
    passStatus: Array<boolean>
-   passLetters: Array<config>
+   passLetters: Array<config<string>>
    passgenArray: Array<string>
    strengthCount: number
 }

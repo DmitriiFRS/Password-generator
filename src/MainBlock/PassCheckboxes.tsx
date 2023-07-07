@@ -1,6 +1,5 @@
 import { ChangeEvent } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../Redux/Store";
+import { useDispatch } from "react-redux";
 import { changeSettings } from '../Redux/Slices/passgenSlice';
 type checkboxType = {
    id: number
@@ -8,7 +7,6 @@ type checkboxType = {
 }
 function PassCheckboxes () {
    const dispatch = useDispatch();
-   const settingArrays = useSelector((state: RootState) => state.passgen.passgenArray);
    function changePassConfig(e: ChangeEvent<HTMLInputElement>, index: number) {
       dispatch(changeSettings(index))
    }
