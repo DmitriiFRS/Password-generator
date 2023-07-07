@@ -260,6 +260,14 @@ input[type=checkbox]:checked::after {
   .pass-generate__icon {
     right: 25%;
   }
+  .pass-generate__btn:active {
+    background-color: transparent;
+    color: #A4FFAF;
+    border: 2px solid #A4FFAF;
+  }
+  .pass-generate__btn:hover {
+    pointer-events: none;
+  }
 }
 @media(max-width: 400px) {
   .checkboxes__block {
