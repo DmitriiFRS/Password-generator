@@ -144,6 +144,10 @@ input[type=checkbox]:checked::after {
   left: 1px;
   top: 0;
   content: url(./imges/icon-check.svg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .checkboxes__title {
   margin: 0 0 0 24px;
@@ -241,7 +245,11 @@ input[type=checkbox]:checked::after {
   .pass-strength {
     padding: 20px 16px;
   }
+  .container {
+    padding: 64px 10px 0 10px;
+  }
 }
+/* ====================================== */
 @media(max-width: 420px) {
   .pass__input {
     font-size: 16px;
